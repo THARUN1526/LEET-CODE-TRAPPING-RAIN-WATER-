@@ -1,0 +1,11 @@
+The time complexity of the problem is O(n), where n is the length of the input list `height`.
+
+The code consists of three main parts:
+
+1. Initializing the `l` list: This part iterates over the `height` list once and fills the `l` list with the maximum height encountered from the left. Since this is a single iteration over the list, the time complexity is O(n).
+
+2. Initializing the `r` list: This part iterates over the `height` list in reverse order and fills the `r` list with the maximum height encountered from the right. Again, this is a single iteration over the list, so the time complexity is O(n).
+
+3. Calculating the trapped water: This part also iterates over the `height` list once, calculating the amount of trapped water for each position. Since this is a single iteration, the time complexity is O(n).
+
+Overall, the code has a time complexity of O(n) because the three main parts of the code, each with a time complexity of O(n), are executed sequentially. Therefore, the dominant factor in the time complexity is the size of the input list `height`.

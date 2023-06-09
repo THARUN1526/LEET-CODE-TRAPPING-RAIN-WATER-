@@ -1,0 +1,16 @@
+
+Here's how the algorithm works:
+
+1. Initialize two lists, `l` and `r`, with all elements set to zero. These lists will store the maximum height encountered from the left and the right, respectively, for each position in the input height list.
+
+2. Iterate over the `height` list, filling the `l` list with the maximum height encountered from the left. The maximum height for each position `i` is determined by comparing the current height `h` with the maximum height found so far `l[i-1]` (if `i` is not the first element). The maximum height is stored in the `l` list at the corresponding index `i`.
+
+3. Iterate over the `height` list in reverse order, filling the `r` list with the maximum height encountered from the right. The maximum height for each position `i` is determined by comparing the current height `h` with the maximum height found so far `r[i+1]` (if `i` is not the last element). The maximum height is stored in the `r` list at the corresponding index `i`.
+
+4. Initialize a variable `water` to keep track of the total trapped water, starting with zero.
+
+5. Iterate over the `height` list. For each position `i`, calculate the amount of trapped water by taking the minimum of the maximum heights from the left and right (i.e., `min(l[i], r[i])`) and subtracting the current height `h`. Add this calculated amount to the `water` variable.
+
+6. Return the final value of `water`, which represents the total amount of trapped rainwater on the given elevation map.
+
+In summary, the algorithm calculates the maximum heights from the left and right for each position in the input height list and then calculates the trapped water by subtracting the current height from the minimum of the maximum heights from the left and right. Finally, it returns the total trapped water.
